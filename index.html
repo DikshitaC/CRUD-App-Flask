@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bookstore</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Action</th>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td>{{ book[0] }}</td>
+                <td>{{ book[1] }}</td>
+                <td>{{ book[2] }}</td>
+                <td>{{ book[3] }}</td>
+                <td>
+                    
+                    <a href="/delete/{{ book[0] }}">Delete</a>
+                    <a href="/read/{{ book[0] }}">Read</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <div class="center-align">
+        <a href="/add">Add New Book</a>
+    </div>
+</body>
+</html>
