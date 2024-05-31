@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        .book-details {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+           
+        }
+
+        .book-details p {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        a:hover {
+            color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <div class="book-details">
+        <p></p>Title: {{ book[1] }}</p>
+        <p>Author: {{ book[2] }}</p>
+        <p>Pages: {{ book[3] }}</p>
+    </div>
+    <br>
+    
+</body>
+</html>
